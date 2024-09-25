@@ -13,17 +13,24 @@ html,body {
 body{
     overflow-x: hidden;
 }
-#crsr{
+.mousefollower {
+    border: 8px solid #fff;
+    background-color: transparent;
+    scale: 2;
+    mix-blend-mode: difference;
+    z-index: 990;
+}
+/* #crsr{
     height: 3vw;
     width: 3vw;
     border-radius: 50%;
-    /* background-color: #fff; */
+    background-color: transparent;
     border: 1px solid #ffffffbe;
     position: fixed;
     mix-blend-mode: difference;
     transform: translate(-50%,-50%);
     z-index: 999;
-}
+} */
 #loader{
     height: 100%;
     width: 100%;
@@ -181,6 +188,7 @@ body{
     text-transform: uppercase;
     line-height: 7.1vw;
     position: relative;
+    z-index: 9;
 }
 #hero1::before{
     content: "01";
@@ -212,7 +220,7 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #151515;
-    padding-top: 17vh;
+    margin-top: 17vh;
     position: relative;
 }
 #video-container{
@@ -220,28 +228,32 @@ body{
     width: 73vw;
     position: relative;
     left: 26%;
-    background-image: url(./Showreel-2022-preview-1.jpg);
+    /* background-color: red; */
+    background-image: url(./assets/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
 }
-#video-container img{
+/* #video-container img{
     position: absolute;
     height: 100%;
     width: 100%; 
     object-fit: cover;
     top: 0;
-}
+} */
 #video-container video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
 }
 #video-cursor{
-    height: 9vw;
-    width: 9vw;
+    height: 10vw;
+    width: 10vw;
     background-color: #FFA63D;
     border-radius: 50%;
     position: absolute;
     top: -10%;
-    left: 80%;
+    left: 75%;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -253,7 +265,153 @@ body{
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: #030303;
+    /* background-color: #030303; */
+    position: relative;
+    padding: 20vh 2vw;
+    margin-bottom: 20vh;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    margin-left: 28vw;
+    text-transform: uppercase;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 500;
+    top: 8%;
+    left: -12%;
+}
+#page3 .underline{
+    height: 2px;
+    width: 67%;
+    background-color: #fff;
+    margin-left: 27vw;
+}
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    width: 24vw;
+    flex-shrink: 0;
+    margin: 1vw;
+}
+.image-div:nth-child(2){
+    height: 38vw;
+    position: relative;
+    overflow: hidden;
+    width: 31vw;
+    flex-shrink: 0;
+    margin: 1vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page3-circle1{
+    height: 24vw;
+    width: 24vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 42vh;
+    margin-left: 8vw;
+    position: relative;
+    transition: all ease 0.3s;
+}
+.page3-circle1 svg{
+    height: 35%;
+}
+.page3-circle2{
+    height: 24vw;
+    width: 24vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 42vh; */
+    /* margin-left: 8vw; */
+    position: relative;
+    transition: all ease 0.3s;
+}
+.page3-circle2 svg{
+    height: 35%;
+    rotate: -45deg;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    transition-delay: 0.1s;
+}
+.circle-in p{
+    font-size: 1.1vw;
+    color: #000;
+    width: 80%;
+    scale: 0;
+    display: flex;
+    justify-content: center;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+.image-div:nth-child(3){
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    width: 24vw;
+    flex-shrink: 0;
+    margin: 1vw;
+}
+.image-div:nth-child(4){
+    height: 38vw;
+    position: relative;
+    overflow: hidden;
+    width: 31vw;
+    flex-shrink: 0;
+    margin: 1vw;
 }
 #page4{
     min-height: 100vh;
@@ -343,6 +501,7 @@ body{
     padding-top: 1vw;
 }
 #page5{
+    margin-top: 18vw;
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -362,7 +521,7 @@ body{
     display: inline-block;
     margin-right: 16px;
     animation-name: animes;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -390,7 +549,7 @@ body{
     display: inline-block;
     margin-right: 16px;
     animation-name: animes;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
@@ -411,6 +570,7 @@ body{
     color: transparent;
 }
 #footer{
+    margin-top: 9vw;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -465,3 +625,22 @@ body{
     font-size: 1.2vw;
     font-weight: 500;
 }
+
+._canvas_container{
+    z-index: 999999 !important;
+
+}
+#flag{
+    height: 28vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+#hero3{
+    /* background-color: red; */
+    z-index: 99;
+    position: relative;
+}
+
