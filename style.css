@@ -270,7 +270,7 @@ body{
     /* background-color: #030303; */
     position: relative;
     padding: 20vh 2vw;
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
 }
 #page3 h1{
     font-size: 7vw;
@@ -505,7 +505,7 @@ body{
         justify-content: flex-start;
         flex-wrap: wrap;
         } */
-        /* #img-part-2 .image-div:nth-child(2){
+/* #img-part-2 .image-div:nth-child(2){
     height: 38vw;
     position: relative;
     overflow: hidden;
@@ -545,6 +545,24 @@ body{
 .page3-circle2 svg{
     height: 35%;
     rotate: -45deg;
+}
+.page3-circle3{
+    height: 24vw;
+    width: 24vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0vh;
+    margin-left: 30vw;
+    bottom: 46vw;
+    position: relative;
+    transition: all ease 0.3s;
+}
+.page3-circle3 svg{
+    height: 35%;
+    rotate: -90deg;
 }
 .circle-in{
     height: 100%;
@@ -586,13 +604,20 @@ body{
     scale: 1;
     opacity: 1;
 }
+.page3-circle3:hover .circle-in{
+    scale: 1;
+}
+.page3-circle3:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
 #page4{
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
     position: relative;
     padding-bottom: 5vh;
-    margin-top: 20vh;
+    margin-top: -5 0vh;
 }
 #page4-content{
     width: 72vw;
@@ -818,3 +843,581 @@ body{
     position: relative;
 }
 
+@media (max-width:600px) {
+    .mousefollower {
+        display: none;
+    }
+    #page1{
+        height: 55vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        padding-top: 1px;
+    }
+    
+    #page1 #nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3.8vw 7.5vw;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    #nav svg{
+        scale: 0.85;
+    }
+    #page1 #nav-center{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 28vw;
+        top: 8vh;
+        line-height: 1.2vw;
+    }
+    #page1 #nav-center h5{
+        font-size: 1.1vw;
+        font-weight: 200;
+        display: none;
+    }
+    
+    #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+        display: none;
+    }
+    #nav-part2 h4{
+        font-size: 1vw;
+        font-weight: 500;
+    }
+    .hero{
+        /* background-color: red; */
+        width: 72.5%;
+        margin-left: 5%;
+        height: fit-content;
+        /* background-color: red; */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    #hero-s{
+        margin-top:20vh;
+    }
+    .hero h1{
+        font-size: 9vw;
+        font-weight: 550;
+        text-transform: uppercase;
+        line-height: 9vw;
+        position: relative;
+        z-index: 9;
+    }
+    #hero1::before{
+        content: "01";
+        position: absolute;
+        font-size: 4.5vw;
+        font-family: "silk serif";
+        font-weight: 500;
+        top: 25%;
+        left: 5%;
+    }
+    .hero h2, .hero h3{
+        font-size: 9vw;
+        font-weight:550;
+        text-transform: uppercase;
+        line-height: 9vw;
+        /* transition: all ease 0.3s; */
+    }
+    .hero h2{
+        border-bottom: 0.6vw solid #fff;
+        padding-bottom: 0.8vw;
+    }
+
+    #page2{
+        height: 60vh;
+        width: 100%;
+        background-color: #151515;
+        margin-top: -2vh;
+        position: relative;
+    }
+    #video-container{
+        height: 45vh;
+        width: 100vw;
+        position: relative;
+        left: 0%;
+        /* background-color: red; */
+        background-image: url(./assets/Showreel-2022-preview-1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    #video-container video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+    }
+    #video-cursor{
+        height: 20vw;
+        width: 20vw;
+        background-color: #FFA63D;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        transform: translate(-50%,-50%);
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+    .ri-play-fill{
+        font-size: 5vw;
+    }
+
+    #page3{
+        min-height: 100vh;
+        width: 100%;
+        /* background-color: #030303; */
+        position: relative;
+        padding: 20vh 0vw;
+        margin-top: 20vh;        
+    }
+    #page3 h1{
+        font-size: 9vw;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        margin-left: 3vw;
+        text-transform: uppercase;
+        margin-bottom: 3vh;
+    }
+    #page3 h1::before{
+        content: "02";
+        position: absolute;
+        font-size: 4vw;
+        font-family: "silk serif";
+        font-weight: 500;
+        top: -3vh;
+        left: 2%;
+    }
+    #page3 .underline{
+        height: 2px;
+        width: 94%;
+        background-color: #fff;
+        margin-left: 3vw;
+    }
+    #image-div-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .image-group{
+        height: 80vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    .image-group h3{
+        font-size: 6vw;
+        font-weight: 550;
+        margin-bottom: 2vw;
+        margin-left: 5vw;
+    }
+    .image-div{
+        height: 70vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    .image-div img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .image-div h3{
+        font-size: 4vw;
+    }
+    #img-down-titl{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 3vw;
+    }
+    #img-down-titl p:nth-child(1){
+        margin-top: 1.5vw;
+        font-size: 4vw;
+        width: 40vw;
+    }
+    .image-group:nth-child(2){
+        height: 80vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .image-group:nth-child(2) .image-div{
+        height: 70vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    
+    #img-part-2{
+        height: 170vh;
+        position: relative;
+        width: 100vw;
+        margin: 1vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-group1{
+        height: 80vh;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: -5vh;
+    }
+    .image-group1 .image-div{
+        height: 70vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    .image-group1 h3{
+        font-size: 5vw;
+    }
+    .image-group2 h3{
+        font-size: 5vw;
+    }
+    .image-group2{
+        height: 85vh;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        left: 0vw;
+        margin-top: 95vh;
+    }
+    #img-part-2 .image-group2 .image-div{
+        height: 65vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0; 
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    #img-part-3{ 
+        height: 200vh;
+        position: relative;
+        width: 100vw;
+        margin: 1vw;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0vh;
+    }
+    .image-group3{
+        height: 85vh;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .image-group3 .image-div{
+        height: 65vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0; 
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    .image-group3 h3{
+        font-size: 4vw;
+        margin-top: 4vh;
+    }
+    .image-group4{
+        height: 85vh;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100vh;
+    }
+    .image-group4 .image-div{
+        height: 65vh;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        flex-shrink: 0; 
+        margin: 0vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+    .image-group4 h3{
+        font-size: 4vw;
+    }
+    .page3-circle1{
+        display: none;
+    }
+    .page3-circle2{
+        display: none;
+    }
+    .page3-circle3{
+        display: none;
+    }
+
+    #page4{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        padding-bottom: 5vh;
+        margin-top: 15vh;
+    }
+    #page4-content{
+        width: 100vw;
+        margin-left: 3%;
+    }
+    #page4-content h1{
+        font-size: 9vw;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+    }
+    #page4-content h1::before{
+        content: "03";
+        position: absolute;
+        font-size: 4.5vw;
+        font-family: "silk serif";
+        font-weight: 500;
+        top: -3.5vh;
+        left: 2%;
+    }
+    #page4-content .underline{
+        height: 2px;
+        width: 94%;
+        background-color: #fff;
+        margin-top: 3vh;
+        margin-bottom: 7vh;
+    }
+    #page4-content>p{
+        font-size: 5.5vw;
+        width: 85%;
+        margin-bottom: 4.5vw;
+    }
+    #page4-flex{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #page4-flex img{
+        width: 100%;
+        margin-top: 5vh;
+    }
+    #page4-flex p{
+        font-size: 3.3vw;
+        width: 65%;
+        font-weight: 500;
+        line-height: 4.5vw;
+    }
+    #page4-bluebox{
+        background-color: #3F7DF4;
+        height: 45vh;
+        width: 100vw;
+        padding: 3vw;
+        position: relative;
+        margin-top: 0vh;
+        margin-left: 0vw;
+    }
+    .blu-div-elem{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        /* background-color: red; */
+        padding: 4.5vw 0;
+        border-bottom: 2px solid #ffffffbe;
+    }
+    .blu-div-elem h4{
+        font-size: 4.2vw;
+        font-weight: 500;
+    }
+    .blu-div-elem p{
+        width: 50%;
+        font-size: 3vw;
+        font-weight: 500;
+    }
+    #we-work .underline{
+        height: 2px;
+        width: 94%;
+        background-color: #fff;
+        margin-top: 9vh;
+        margin-bottom: 2vh;
+    }
+    #we-work h5{
+        font-size: 4vw;
+        font-weight: 500;
+        padding-top: 2vh;
+    }
+
+    #page5{
+        margin-top: 32vh;
+        min-height: 50vh;
+        width: 100%;
+        position: relative;
+    }
+    .elem{
+        white-space: nowrap;
+        overflow-x: hidden;
+        margin-bottom: -2.5vw;
+    }
+    .elem h1{
+        font-size: 10vw;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 100;
+        text-transform: uppercase;
+        /* background-color: red; */
+        color: transparent;
+        display: inline-block;
+        margin-right: 16px;
+        animation-name: animes;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    .elem2{
+        white-space: nowrap;
+        overflow-x: hidden;
+        margin-bottom: -2.5vw;
+    }
+    .elem2 h1{
+        font-size: 10vw;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 100;
+        text-transform: uppercase;
+        /* background-color: red; */
+        color: transparent;
+        display: inline-block;
+        margin-right: 16px;
+        animation-name: animes;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+    
+    .elem span{
+        font-family: "Plain Light";
+        font-style: italic;
+        -webkit-text-stroke: 1px #fff;
+        font-family: "silk serif";
+        color: transparent;
+    }
+    .elem2 span{
+        font-family: "Plain Light";
+        font-style: italic;
+        -webkit-text-stroke: 1px #fff;
+        font-family: "silk serif";
+        color: transparent;
+    }
+    #footer{
+        margin-top: 7vh;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        padding-left: 3vw;
+    }
+    #footer h1{
+        font-size: 9vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    #footer h1::before{
+        content: "04";
+        position: absolute;
+        font-size: 4vw;
+        font-family: "silk serif";
+        font-weight: 500;
+        top: -3vh;
+        left: 2%;
+    }
+    .underline{
+        height: 2px;
+        width: 93%;
+        background-color: #fff;
+        margin: 2vh 0;
+    }
+    #footer-div{
+        display: flex;  
+        flex-direction: column;
+        padding-right: 8vw;
+        padding: 3vw 0;
+    }
+    #footer-div h6{
+        font-size: 4vw;
+        font-weight: 400;
+        padding-bottom: 1.5vw;
+        margin-bottom: 2.5vh;
+        margin-top: 3vh;
+    }
+    .box{
+        width: 35%;
+    }
+    #footer-div h5{
+        font-size: 6vw;
+        font-weight: 400;
+        margin:0.2vh 0;
+    }
+    #footer-div a{
+        font-size: 5vw;
+        font-weight: 500;
+        margin-bottom: 2vh;
+    }
+    #footer>h5{
+        font-size: 4vw;
+        font-weight: 500;
+        margin-top: 1.5vh;
+    }
+}
